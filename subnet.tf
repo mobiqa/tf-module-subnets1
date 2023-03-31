@@ -6,7 +6,7 @@ resource "aws_subnet" "main" {
 
   tags = merge(
     local.common_tags,
-    { Name = "${var.env}-${var.name}-subnet-$(count.index+1)" }
+    { Name = "${var.env}-${var.name}-subnet-${count.index + 1}" }
   )
 }
 
